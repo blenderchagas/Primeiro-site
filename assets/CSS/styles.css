@@ -13,12 +13,14 @@
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 2rem;
     color: var(--primary-color);
+    line-height: 1.5;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -31,7 +33,10 @@ h1 {
 }
 
 h2 {
-    font-size: 5.5rem;
+    font-size: 6rem;
+    margin-bottom: 5rem;
+    text-transform: uppercase;
+    line-height: 1.2;
 }
 
 h3 {
@@ -42,6 +47,10 @@ a {
     text-decoration: none;
 }
 
+p {
+    margin-bottom: 3rem;
+}
+
 .main-bg {
     background-image: url('../img/main-bg.svg');
     background-size: cover;
@@ -49,8 +58,13 @@ a {
     color: var(--white-color);
 }
 
+.main-java{
+    background-image: url('../img/main-java.svg');
+}
+
 .white-bg {
     background: var(--white-color);
+    color: var(--primary-color)
 }
 
 .main-content {
@@ -63,12 +77,17 @@ a {
     min-height: 100vh;
 }
 
+.menu-spacing {
+    height: 6.5rem;
+}
+
 .menu {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     width: 100%;
+    z-index: 1;
     border-bottom: 0.1rem solid var(--light-gray-color);
 }
 
@@ -78,6 +97,42 @@ a {
     align-items: center;
     padding-top: 0;
     padding-bottom: 0;
+}
+
+.intro-content {
+    position: relative;
+    top: -8rem;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: var(--gap);
+    height: 100vh;  
+}
+
+.intro-img img, 
+.intro-img svg {
+    max-width: 100%;
+    height: auto;
+}
+
+.top3-content {
+    max-width: 64rem;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.intro-text-content{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.intro-text-content, .intro-img {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
 }
 
 .menu h1 {
